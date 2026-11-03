@@ -2,15 +2,18 @@
 
 ## 满族说部（孙吴县满语故事）
 满族说部是满族口耳相传的长篇民间说唱，内容含部族史、英雄传说与民俗往事，孙吴县以满语故事形式传承，为国家级非物质文化遗产。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1nL8d6vEiy&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 蒙古族四胡音乐
 流传于杜尔伯特蒙古族自治县，四胡是蒙古族代表性拉弦乐器，曲调辽阔深沉，常用于独奏、说唱与民歌伴奏。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1qP4y1W7qT&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 唢呐艺术（杨小班鼓吹乐棚）
 流传于大庆市肇州县，是当地传统婚丧民俗中吹奏的鼓吹乐班社技艺，唢呐为主奏，曲牌丰富，乡土气息浓郁。
 
 ## 森林号子（兴安岭森林号子）
 流传于伊春林区，是林业工人在伐木、集材、运输劳动中哼唱的劳动号子，节奏铿锵，号子声腔雄浑豪迈。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1i84y117oh&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 鄂伦春族民歌（鄂伦春族赞达仁）
 流传于大兴安岭地区，"赞达仁"即鄂伦春族山歌，多在狩猎、迁徙、节庆中传唱，旋律高亢自由，反映山林狩猎生活。
@@ -18,6 +21,7 @@
 
 ## 达斡尔族民歌（罕伯岱达斡尔族民歌）
 流传于齐齐哈尔富拉尔基罕伯岱村，是达斡尔族世代传承的原生态民歌，内容涉及生产劳动、爱情与民族历史。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1L3411772q&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 赫哲族嫁令阔
 流传于双鸭山饶河县，"嫁令阔"是赫哲族民间小调的统称，多为渔猎生活中的即兴短歌，曲调婉转清新。
@@ -28,9 +32,11 @@
 
 ## 达斡尔族鲁日格勒舞
 流传于齐齐哈尔梅里斯达斡尔族区，"鲁日格勒"意为燃烧起来，是达斡尔族传统集体歌舞，动作模仿狩猎与劳动。
+<iframe src="//player.bilibili.com/player.html?aid=298772511&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 评剧（黑龙江评剧）
 以黑龙江省评剧院为传承主体，是北方重要地方戏曲剧种，唱腔板式丰富，表演贴近生活。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1GmTy6eESD&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 皮影戏（望奎县皮影戏）
 流传于绥化望奎县，黑龙江代表性皮影流派，影人造型质朴，唱腔融合东北小调，曾入选经典剧目并创新融合伊玛堪。
@@ -62,9 +68,11 @@
 
 ## 赫哲族伊玛堪
 赫哲族独有的口头说唱史诗，无乐器伴奏、说唱交替，讲述英雄与民族历史，入选联合国教科文组织人类非遗代表作名录。
+<iframe src="//player.bilibili.com/player.html?bvid=BV13R4y1D7De&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 鄂伦春族摩苏昆
 流传于黑河市，"摩苏昆"是鄂伦春族说唱艺术，兼具说与唱，内容为英雄传说和山林生活故事。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1yM4y1G7mb&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 戏法（赵魁良戏法）
 流传于哈尔滨，以黑龙江省杂技团为传承主体，是北方传统古彩戏法（魔术）的代表性流派。
@@ -93,12 +101,15 @@
 
 ## 桦树皮制作技艺（饶河）
 流传于双鸭山饶河县，以桦树皮制作盒、筒、船等生活器具，是北方渔猎民族传统工艺。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1zQTezcEXV&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 桦树皮制作技艺（鄂伦春族桦树皮船制作技艺）
 流传于大兴安岭地区，鄂伦春族用整张桦树皮缝制桦树皮船，是山林民族独特的水上交通工具技艺。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1E5JAzuEXy&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 赫哲族鱼皮制作技艺
 流传于佳木斯同江市，将大马哈鱼、鳇鱼鱼皮鞣制后缝制衣服、鞋靴与工艺品，是赫哲渔猎文化的标志性技艺。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1x94y1u72c&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 鄂伦春族狍皮制作技艺
 流传于黑河市爱辉区，鞣制狍皮制作衣帽、被褥，防寒耐用，是狩猎民族适应严寒的传统技艺。
@@ -106,24 +117,24 @@
 
 ## 老汤精配制
 流传于哈尔滨市，是老字号调味品"老汤精"的传统配制工艺，选料与吊汤工艺独特。
-![老汤精配制](https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?auto=format&fit=crop&w=600&q=80)
 
 ## 刀剑锻制技艺（七台河刀剑锻制技艺）
 流传于七台河市，传承传统手工锻造刀剑工艺，经锻打、淬火、研磨成型，刚柔并济。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1go4y1X7ge&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 中医传统制剂方法（枇杷露传统制剂）
 流传于哈尔滨，是枇杷露等中成药的传统膏滋制剂工艺，讲究选材、炮制与熬制。
-![枇杷露制剂](https://images.unsplash.com/photo-1542361345-89e58247f2d5?auto=format&fit=crop&w=600&q=80)
 
 ## 中医传统制剂方法（老王麻子膏药制作技艺）
 流传于哈尔滨道外区，"老王麻子"膏药是哈尔滨老字号外用膏药制作技艺。
-![传统中医药](https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=600&q=80)
 
 ## 端午节（五大连池药泉会）
 流传于五大连池，每年端午节前后人们聚于药泉，饮水洗浴、祈福疗病，是鄂伦春等民族与地方民俗融合的节庆。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1b64y1p7ce&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 鄂伦春族古伦木沓节
 流传于黑河市爱辉区，"古伦木沓"意为祭祀火神，在春季举行，由祭火仪式演变为民族歌舞与集会节日。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1Q64y1F7gj&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 元宵节（瑷珲上元节）
 流传于黑河市爱辉区瑷珲古城，以秧歌、灯会、祭祖为特色，是边疆古城特有的元宵节庆习俗。
@@ -131,13 +142,14 @@
 
 ## 朝鲜族花甲礼
 流传于牡丹江市，是朝鲜族为六十岁老人举行的传统祝寿礼仪，仪式庄重，体现尊老民俗。
+<iframe src="//player.bilibili.com/player.html?bvid=BV168NCzJE4g&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 鄂温克族瑟宾节
 流传于齐齐哈尔讷河市，"瑟宾"意为欢乐祥和，节日中有歌舞、摔跤、抢枢等传统竞技与集体活动。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1ri421a7yB&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## 婚俗（达斡尔族传统婚俗）
 流传于齐齐哈尔富拉尔基，保留说亲、定亲、迎亲等完整传统仪程，是达斡尔族婚恋文化的活态传承。
-![达斡尔族传统婚礼](https://imagecloud.thepaper.cn/thepaper/image/278/798/33.jpg)
 
 ## 婚俗（赫哲族传统婚俗）
 流传于佳木斯同江市，融合渔猎民族特色的婚礼仪程，迎亲、对歌、萨满祈福等环节独具风貌。
@@ -145,6 +157,7 @@
 
 ## 赫哲族乌日贡大会
 流传于佳木斯同江市，"乌日贡"是赫哲族综合性民族盛会，汇聚伊玛堪说唱、舞蹈、渔猎竞技等文艺体育活动。
+<iframe src="//player.bilibili.com/player.html?bvid=BV1pHTvz6ErT&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 # 黑龙江省国家级非物质文化遗产好物推荐
 ## 满族说部文创绘本

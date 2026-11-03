@@ -30,7 +30,6 @@ export async function POST(req: Request) {
       messages,
     });
 
-    // v3 版本的经典写法
     return result.toDataStreamResponse();
   } catch (error: any) {
     console.error("后端报错啦：", error);

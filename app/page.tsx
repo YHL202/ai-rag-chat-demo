@@ -5,23 +5,19 @@ import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 
 export default function Chat() {
-  // v3 版本的标准用法
+  // 
   const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat();
 
   return (
-    // 最外层背景：淡淡的蓝灰渐变，显得不单调
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex flex-col items-center py-8 px-4 font-sans">
       
-      {/* 页面主体卡片容器 */}
       <div className="w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-[85vh] border border-gray-100">
         
-        {/* 顶部 Header */}
         <header className="bg-gradient-to-r from-blue-700 to-blue-900 text-white py-4 px-6 text-center shadow-md z-10">
           <h1 className="text-2xl font-bold tracking-wider">黑龙江非遗 AI 问答系统</h1>
           <p className="text-blue-200 text-sm mt-1">黑土好风光，非遗韵悠长</p >
         </header>
 
-        {/* 聊天记录区域 */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6 bg-gray-50/50">
           {/* 初始欢迎语 */}
           {messages.length === 0 && (
@@ -55,7 +51,7 @@ export default function Chat() {
                     : 'bg-white border border-gray-200 text-gray-800 rounded-tl-none'
                 }`}
               >
-                {/* 渲染 Markdown（支持加粗、列表、链接、图片） */}
+                {/* 渲染 Markdown */}
                 <div className="prose prose-sm max-w-none prose-p:leading-relaxed">
                 <ReactMarkdown
   rehypePlugins={[rehypeRaw]} /*允许解析 HTML 标签 */
