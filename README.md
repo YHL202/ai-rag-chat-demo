@@ -12,7 +12,7 @@
 - **安全与边界**：内置严格的 Prompt 控制，拒绝无关提问，杜绝 AI 幻觉。
 - **精美 UI**：基于 Next.js 与 Tailwind CSS 打造现代化聊天界面。
 
-## 🛠️ 技术栈
+## 技术栈
 - 框架：Next.js 15 (App Router)
 - UI：Tailwind CSS + React-Markdown
 - 数据库：Upstash Vector
