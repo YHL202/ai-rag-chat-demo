@@ -1,8 +1,7 @@
 'use client';
 
 import { useChat } from '@ai-sdk/react';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
+import ChatMessage from './components/chatMessage';
 
 export default function Chat() {
   // 
@@ -33,57 +32,9 @@ export default function Chat() {
           )}
 
           {/* 消息列表 */}
+         
           {messages.map((m) => (
-            <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-              
-              {/* AI 头像 */}
-              {m.role !== 'user' && (
-                <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm mr-3 flex-shrink-0 mt-1">
-                  AI
-                </div>
-              )}
-
-              {/* 气泡内容 */}
-              <div
-                className={`max-w-[75%] p-4 rounded-2xl shadow-sm ${
-                  m.role === 'user'
-                    ? 'bg-blue-600 text-white rounded-tr-none'
-                    : 'bg-white border border-gray-200 text-gray-800 rounded-tl-none'
-                }`}
-              >
-                {/* 渲染 Markdown */}
-                <div className="prose prose-sm max-w-none prose-p:leading-relaxed">
-                <ReactMarkdown
-  rehypePlugins={[rehypeRaw]} /*允许解析 HTML 标签 */
-  components={{
-    // 处理链接
-    a: ({ node, ...props }) => (
-      <a {...props} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 underline font-semibold" />
-    ),
-    // 处理图片
-    img: ({ node, ...props }) => (
-      < img {...props} className="max-w-full h-auto rounded-lg my-2 shadow-sm border" style={{ maxHeight: '250px' }} />
-    ),
-    // 处理 B 站视频 iframe 
-    iframe: ({ node, ...props }) => (
-      <div className="w-full my-3 rounded-xl overflow-hidden shadow-lg border border-gray-200 aspect-video">
-        <iframe {...props} className="w-full h-full" allowFullScreen />
-      </div>
-    )
-  }}
->
-  {m.content}
-</ReactMarkdown>
-                </div>
-              </div>
-              
-              {/* 用户头像 */}
-              {m.role === 'user' && (
-                <div className="w-8 h-8 rounded-full bg-gray-300 text-gray-700 flex items-center justify-center text-sm ml-3 flex-shrink-0 mt-1">
-                  我
-                </div>
-              )}
-            </div>
+            <ChatMessage key={m.id} message={m} />
           ))}
 
           {/* 加载状态 */}
