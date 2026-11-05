@@ -1,89 +1,88 @@
 'use client';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
-import { useChat } from '@ai-sdk/react';
-import ChatMessage from './components/chatMessage';
+export default function Home() {
+  // 完美复刻队友的轮播图逻辑
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    '/img02/t1.jpg',
+    '/img02/t2.jpg',
+    '/img02/t3 (1).jpg',
+    '/img02/t4 (1).jpg',
+    '/img02/t5.jpg',
+    '/img02/t6.jpg',
+    '/img02/t7.jpg',
+    '/img02/t8.jpg',
+    '/img02/t9.jpg',
+    '/img02/t10.jpg',
+    '/img02/t11.jpg',
+    '/img02/t12.jpg'
+  ];
 
-export default function Chat() {
-  // 
-  const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat();
+  // 自动轮播，每3秒切换一次
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex flex-col items-center py-8 px-4 font-sans">
-      
-      <div className="w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-[85vh] border border-gray-100">
-        
-        <header className="bg-gradient-to-r from-blue-700 to-blue-900 text-white py-4 px-6 text-center shadow-md z-10">
-          <h1 className="text-2xl font-bold tracking-wider">黑龙江非遗 AI 问答系统</h1>
-          <p className="text-blue-200 text-sm mt-1">黑土好风光，非遗韵悠长</p >
-        </header>
+    <div>
 
-        <div className="flex-1 overflow-y-auto p-6 space-y-6 bg-gray-50/50">
-          {/* 初始欢迎语 */}
-          {messages.length === 0 && (
-            <div className="flex flex-col items-center justify-center h-full text-gray-400 space-y-4">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-3xl">
-                🏮
-              </div>
-              <p className="text-center">
-                你好！我是小忆。<br/>
-                你可以问我关于黑龙江非遗的相关问题。
-              </p >
+      {/* 首页核心区域 */}
+      <section id="home" className="page show">
+        <div className="hero">
+          <div className="hero-text">
+            <h1>黑龙江非遗 AI 问答系统</h1>
+            <p>以检索增强生成连接地域文化与非遗知识</p >
+            <div className="btn-group">
+              <Link href="/chat" className="btn btn-primary">开始问答</Link>
+              <Link href="/list" className="btn btn-outline">浏览名录</Link>
             </div>
-          )}
-
-          {/* 消息列表 */}
-         
-          {messages.map((m) => (
-            <ChatMessage key={m.id} message={m} />
-          ))}
-
-          {/* 加载状态 */}
-          {isLoading && (
-            <div className="flex justify-start">
-              <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm mr-3 flex-shrink-0 mt-1">
-                AI
-              </div>
-              <div className="bg-white border border-gray-200 p-4 rounded-2xl rounded-tl-none flex items-center space-x-2">
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"></div>
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
-                <span className="text-gray-500 text-sm ml-2">正在检索知识库...</span>
-              </div>
-            </div>
-          )}
-
-          {/* 错误提示 */}
-          {error && (
-            <div className="text-center text-red-500 text-sm bg-red-50 p-2 rounded border border-red-200">
-              发生错误：{error.message}
-            </div>
-          )}
-        </div>
-
-        {/* 底部输入框区域 */}
-        <div className="p-4 bg-white border-t border-gray-100">
-          <form onSubmit={handleSubmit} className="flex gap-3">
-            <input
-              className="flex-1 p-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all text-gray-800 placeholder-gray-400"
-              value={input}
-              placeholder="请输入你想了解的非遗项目，例如：赵魁良戏法是什么？"
-              onChange={handleInputChange}
-              disabled={isLoading}
-            />
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-blue-700 hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+          </div>
+          
+          {/* 右侧轮播图 */}
+          <div className="hero-image">
+            <div 
+              className="hero-slider-track" 
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {isLoading ? '思考中' : '发送'}
-            </button>
-          </form>
-          <p className="text-center text-xs text-gray-400 mt-3">
-             RAG 智能检索
-          </p >
+              {slides.map((src, index) => (
+                <div className="hero-slide" key={index}>
+                  < img src={src} alt={`非遗轮播 ${index + 1}`} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-      </div>
+        {/* 底部三大功能卡片 */}
+        <section className="features">
+          <Link href="/chat" className="feature-card feature-btn">
+            <div className="feature-icon icon-red">🤖</div>
+            <div className="feature-text">
+              <h3>AI智能问答</h3>
+              <small>INTELLIGENT Q&A</small>
+            </div>
+          </Link>
+          <Link href="/list" className="feature-card feature-btn">
+            <div className="feature-icon icon-green">🌿</div>
+            <div className="feature-text">
+              <h3>非遗知识库</h3>
+              <small>HERITAGE KNOWLEDGE</small>
+            </div>
+          </Link>
+          <Link href="/goods" className="feature-card feature-btn">
+            <div className="feature-icon icon-green">📜</div>
+            <div className="feature-text">
+              <h3>文创推荐</h3>
+              <small>CULTURAL CREATION</small>
+            </div>
+          </Link>
+        </section>
+      </section>
     </div>
   );
 }
