@@ -786,3 +786,84 @@ nav a.active {
     min-width: 45% !important; /* 保证卡片在手机上有足够的宽度 */
   }
 }
+/* ===== 手机端终极暴力修复补丁 ===== */
+@media (max-width: 768px) {
+  /* 1. 彻底干掉所有横向溢出，禁止左右滑动 */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 2. 顶部导航栏撑满屏幕，不再缩在左边 */
+  header {
+    width: 100vw !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 10px 5px !important;
+  }
+
+  /* 3. 聊天主布局：强制变成上下单列，撑满屏幕 */
+  .chat-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 10px !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4. 左侧聊天框占满宽度，高度适中 */
+  .chat-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 65vh !important; /* 限制聊天框高度，让底下的推荐露出来 */
+    box-sizing: border-box !important;
+  }
+
+  /* 5. 修复聊天气泡，别让长文字和头像跑出去 */
+  .message {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .bubble {
+    max-width: 85% !important; /* 气泡最宽占 85% */
+    word-wrap: break-word !important;
+    word-break: break-all !important;
+  }
+
+  /* 6. 修复底部输入框和发送按钮 */
+  .input-area {
+    width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+  }
+
+  .input-area input {
+    width: 100% !important;
+    min-width: 0 !important; /* 防止输入框把按钮挤出去 */
+    flex: 1 !important;
+  }
+
+  .send-btn {
+    white-space: nowrap !important; /* 强制发送两个字在一行 */
+    padding: 10px 15px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 7. 修复 AI 回复的列表缩进，让圆点不跑到屏幕外 */
+  .bubble ul, .bubble ol {
+    padding-left: 20px !important;
+    margin-left: 0 !important;
+  }
+
+  /* 8. 右侧推荐卡片占满宽度 */
+  .related-panel {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
