@@ -736,3 +736,53 @@ nav a.active {
     padding: 20px;
   }
 }
+
+@media (max-width: 768px) {
+  /* 强制全局撑满，消灭右侧白边 */
+  body, html {
+    width: 100% !important;
+    overflow-x: hidden; /* 防止横向滚动条 */
+  }
+
+  header {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* 修复聊天页面的容器宽度 */
+  .chat-layout {
+    padding: 15px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    gap: 15px !important; /* 聊天框和右侧推荐栏的间距 */
+  }
+
+  .chat-container {
+    width: 100% !important;
+    /* 在手机上，聊天框高度占屏幕的 65%，避免输入框被挡 */
+    height: 65vh !important; 
+  }
+
+  /* 手机端输入框和按钮的高度调整 */
+  .input-area {
+    padding: 10px 15px !important;
+    gap: 10px !important;
+  }
+  .input-area input {
+    padding: 10px 15px !important;
+  }
+  .send-btn {
+    padding: 10px 20px !important;
+  }
+
+  /* 右侧的推荐卡片，在手机上不要两列挤着，改成竖向排列 */
+  .related-panel {
+    width: 100% !important;
+  }
+  .card-row {
+    flex-direction: row !important; /* 保持两列，但宽度自适应 */
+  }
+  .img-card {
+    min-width: 45% !important; /* 保证卡片在手机上有足够的宽度 */
+  }
+}
