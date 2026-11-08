@@ -6,48 +6,65 @@ export default function ListPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
 
+  // 分类菜单
   const categories = [
     { id: 'all', name: '全部' },
     { id: 'folk-lit', name: '民间文学' },
-    { id: 'skill', name: '传统技艺' },
-    { id: 'folk-custom', name: '民俗' },
     { id: 'music', name: '传统音乐' },
     { id: 'dance', name: '传统舞蹈' },
-    { id: 'opera-quyi', name: '戏曲曲艺' },
+    { id: 'opera', name: '传统戏剧' },
+    { id: 'quyi', name: '曲艺' },
+    { id: 'skill', name: '传统技艺' },
+    { id: 'art', name: '传统美术' },
+    { id: 'custom', name: '民俗' },
   ];
 
-  // 完整提取队友的数据
   const heritageData = [
-    // 民间文学
-    { title: '赫哲族伊玛堪', cat: 'folk-lit', desc: '赫哲族长篇口头说唱史诗，无文字，以说唱讲述民族英雄、渔猎传说，列入联合国人类非遗名录。', img: '/img/yimakan.jpg' },
-    { title: '鄂伦春族摩苏昆', cat: 'folk-lit', desc: '鄂伦春族长篇说唱文学，边说边唱，记录山林狩猎生活与民族英雄故事。', img: '/img/moshukun.jpg' },
-    { title: '赫哲族特伦固', cat: 'folk-lit', desc: '赫哲族神话、传说、民间故事，讲述万物起源、民族起源与渔猎智慧。', img: '/img/telungu.jpg' },
-    { title: '满族说部', cat: 'folk-lit', desc: '满族长篇口头叙事，包含部族历史、英雄史诗、神话传说，篇幅宏大。', img: '/img/shuobu.jpg' },
-    // 传统技艺
-    { title: '赫哲族鱼皮制作技艺', cat: 'skill', desc: '赫哲族古老渔猎技艺，加工大马哈鱼皮，缝制服饰、佩饰与生活用品。', img: '/img/yupi.jpg' },
-    { title: '鄂伦春族狍皮制作技艺', cat: 'skill', desc: '利用狍兽皮革鞣制，缝制狍皮袍、帽子、背包，北方狩猎民族特色技艺。', img: '/img/paopi.jpg' },
-    { title: '桦树皮制作技艺', cat: 'skill', desc: '取天然桦树皮，制作容器、器具、桦树皮小船，轻便防水，寒地特色。', img: '/img/huashupi.jpg' },
-    { title: '北大荒版画', cat: 'skill', desc: '诞生于北大荒，以木刻版画展现黑土地垦荒、北国风光。', img: '/img/beidahuang.jpg' },
-    { title: '麦秆剪贴', cat: 'skill', desc: '利用麦秆天然光泽，剪贴浮雕式人物、花鸟、山水装饰画。', img: '/img/maigan.jpg' },
-    { title: '东北黑陶烧制技艺', cat: 'skill', desc: '黑龙江史前黑陶传承，手工制坯、低温烧制，古朴厚重。', img: '/img/heitao.jpg' },
-    // 民俗
-    { title: '鄂伦春族古伦木沓节', cat: 'folk-custom', desc: '鄂伦春火神祭祀节日，春季举办，篝火歌舞、赛马射箭，祭祀火神。', img: '/img/mutajie.jpg' },
-    { title: '赫哲族乌日贡大会', cat: 'folk-custom', desc: '赫哲族民族盛会，民族歌舞、鱼皮工艺、体育竞技，传承渔猎文化。', img: '/img/wurigong.jpg' },
-    { title: '朝鲜族花甲礼', cat: 'folk-custom', desc: '朝鲜族敬老民俗，老人60周岁举办祝寿仪式，感恩长辈。', img: '/img/huajiali.jpg' },
-    // 传统音乐
-    { title: '杨小班鼓吹乐棚', cat: 'music', desc: '黑龙江民间唢呐吹打乐，世代传承，用于婚丧、节庆民俗活动。', img: '/img/guchui.jpg' },
-    { title: '兴安岭森林号子', cat: 'music', desc: '林区伐木工人劳动号子，伴随伐木、抬木劳动传唱，雄浑粗犷。', img: '/img/haozhi.jpg' },
-    { title: '赫哲族嫁令阔', cat: 'music', desc: '赫哲族民间小调，旋律轻柔，描绘渔猎生活、江河风光。', img: '/img/jialinkuo.jpg' },
-    // 传统舞蹈
-    { title: '达斡尔族鲁日格勒舞', cat: 'dance', desc: '达斡尔民间集体舞，模拟动物姿态，妇女自娱舞蹈，节庆欢聚表演。', img: '/img/rurigelewu.jpg' },
-    { title: '朝鲜族长鼓舞', cat: 'dance', desc: '挎长鼓边敲边舞，动作飘逸，朝鲜族经典民族舞蹈。', img: '/img/guwu.jpg' },
-    // 戏曲曲艺
-    { title: '东北二人转', cat: 'opera-quyi', desc: '东北民间说唱戏曲，一丑一旦，载歌载舞，黑土地特色曲艺。', img: '/img/errenzhuan.jpg' },
-    { title: '望奎皮影戏', cat: 'opera-quyi', desc: '黑龙江江北派皮影，皮偶镂刻，灯光投影演唱故事。', img: '/img/wangpiyingxi.jpg' },
-    { title: '东北大鼓', cat: 'opera-quyi', desc: '流传黑龙江多年，以鼓板伴奏说唱长篇故事，唱腔婉转。', img: '/img/dagu.jpg' },
+    { id: 1, title: '满族说部', cat: 'folk-lit', desc: '满族先民口耳相传的长篇说唱叙事文学。', img: '/ich/1.png' },
+    { id: 2, title: '蒙古族四胡音乐', cat: 'music', desc: '蒙古族特色拉弦乐器，曲调辽阔深沉。', img: '/ich/2.png' },
+    { id: 3, title: '唢呐艺术', cat: 'music', desc: '杨小班鼓吹乐棚，传统婚丧民俗中的吹打乐。', img: '/ich/3.png' },
+    { id: 4, title: '森林号子', cat: 'music', desc: '大小兴安岭林区伐木、运木时统一节奏的劳动号子。', img: '/ich/4.png' },
+    { id: 5, title: '鄂伦春族赞达仁', cat: 'music', desc: '鄂伦春族歌唱艺术主体，旋律高亢自由。', img: '/ich/5.png' },
+    { id: 6, title: '达斡尔族民歌', cat: 'music', desc: '罕伯岱村原生态民歌，题材覆盖劳动、爱情。', img: '/ich/6.png' },
+    { id: 7, title: '赫哲族嫁令阔', cat: 'music', desc: '赫哲族民歌总称，曲调婉转清新。', img: '/ich/7.png' },
+    { id: 8, title: '武家鼓吹乐棚', cat: 'music', desc: '林甸武氏家族传承的民间鼓乐班。', img: '/ich/8.png' },
+    { id: 9, title: '达斡尔族鲁日格勒舞', cat: 'dance', desc: '达斡尔族传统集体歌舞，模拟鸟兽与劳动动作。', img: '/ich/9.png' },
+    { id: 10, title: '黑龙江评剧', cat: 'opera', desc: '结合黑土地人文风貌，唱腔高亢开阔。', img: '/ich/10.png' },
+    { id: 11, title: '望奎县皮影戏', cat: 'opera', desc: '江北派皮影代表，雕工细腻，唱腔苍凉。', img: '/ich/11.png' },
+    { id: 12, title: '龙江皮影戏', cat: 'opera', desc: '江南派皮影，造型夸张活泼，注重特技。', img: '/ich/12.png' },
+    { id: 13, title: '东北大鼓', cat: 'quyi', desc: '以三弦伴奏，长篇叙事，长于长篇评书式故事。', img: '/ich/13.png' },
+    { id: 14, title: '五常东北大鼓', cat: 'quyi', desc: '下江分支，唱腔柔和，叙事细腻。', img: '/ich/14.png' },
+    { id: 15, title: '海伦二人转', cat: 'quyi', desc: '北派二人转代表，讲究唱、说、做、舞、绝。', img: '/ich/15.png' },
+    { id: 16, title: '绥棱二人转', cat: 'quyi', desc: '保留大量传统老曲牌，舞台表演克制内敛。', img: '/ich/16.png' },
+    { id: 17, title: '达斡尔族乌钦', cat: 'quyi', desc: '达斡尔族说书体，艺人持四弦胡自弹自唱。', img: '/ich/17.png' },
+    { id: 18, title: '赫哲族伊玛堪', cat: 'quyi', desc: '世界级非遗，徒口说唱史诗，无乐器伴奏。', img: '/ich/18.png' },
+    { id: 19, title: '鄂伦春族摩苏昆', cat: 'quyi', desc: '说唱结合，记录山林狩猎生活与部族往事。', img: '/ich/19.png' },
+    { id: 20, title: '赵魁良戏法', cat: 'skill', desc: '中国古典手彩戏法，注重稳、准、快。', img: '/ich/20.png' },
+    { id: 21, title: '方正剪纸', cat: 'art', desc: '构图饱满，造型稚拙，擅长东北乡土题材。', img: '/ich/21.png' },
+    { id: 22, title: '海伦剪纸', cat: 'art', desc: '线条刚劲，擅长大场面叙事，黑土农耕题材。', img: '/ich/22.png' },
+    { id: 23, title: '麦秆剪贴', cat: 'art', desc: '利用麦秆天然光泽，分层粘贴，半浮雕技法。', img: '/ich/23.png' },
+    { id: 24, title: '渤海靺鞨绣', cat: 'art', desc: '满族刺绣，针法多变，配色浓烈厚重。', img: '/ich/24.png' },
+    { id: 25, title: '克东满族刺绣', cat: 'art', desc: '针脚朴实密实，多用于荷包、枕头顶。', img: '/ich/25.png' },
+    { id: 26, title: '宁安满族刺绣', cat: 'art', desc: '纹样造型夸张变形，充满山野气息。', img: '/ich/26.png' },
+    { id: 27, title: '饶河桦树皮制作', cat: 'skill', desc: '折叠、咬合、缝制成型，不用铁钉，防水轻便。', img: '/ich/27.png' },
+    { id: 28, title: '桦树皮船制作', cat: 'skill', desc: '鄂伦春族传统水上交通工具，全船不用铁钉。', img: '/ich/28.png' },
+    { id: 29, title: '赫哲族鱼皮制作', cat: 'skill', desc: '鞣制大马哈鱼皮，缝制服饰与工艺品。', img: '/ich/29.png' },
+    { id: 30, title: '鄂伦春族狍皮制作', cat: 'skill', desc: '兽皮发酵鞣制，防寒耐用，狩猎文化核心。', img: '/ich/30.png' },
+    { id: 31, title: '老汤精配制', cat: 'skill', desc: '传统复合调味料，文火熬煮，浓缩熟成。', img: '/ich/31.png' },
+    { id: 32, title: '七台河刀剑锻制', cat: 'skill', desc: '折叠锻打，淬火控制硬度，手工打磨开刃。', img: '/ich/32.png' },
+    { id: 33, title: '枇杷露传统制剂', cat: 'skill', desc: '传统膏滋炮制技艺，遵循古法配伍。', img: '/ich/33.png' },
+    { id: 34, title: '老王麻子膏药', cat: 'skill', desc: '传统外用膏药，丹化、去火毒，百年老字号。', img: '/ich/34.png' },
+    { id: 35, title: '五大连池药泉会', cat: 'custom', desc: '又称圣水节，多民族共同参与，祭泉祈福。', img: '/ich/35.png' },
+    { id: 36, title: '鄂伦春族古伦木沓节', cat: 'custom', desc: '祭祀火神的节日，点燃篝火，敬献祭品。', img: '/ich/36.png' },
+    { id: 37, title: '瑷珲上元节', cat: 'custom', desc: '包含挂灯、走百病、扭秧歌，多民族共庆。', img: '/ich/37.png' },
+    { id: 38, title: '朝鲜族花甲礼', cat: 'custom', desc: '为60岁长者举行的祝寿大礼，庄重严谨。', img: '/ich/38.png' },
+    { id: 39, title: '鄂温克族瑟宾节', cat: 'custom', desc: '意为欢乐祥和，有赛马、摔跤、抢枢等活动。', img: '/ich/39.png' },
+    { id: 40, title: '达斡尔族传统婚俗', cat: 'custom', desc: '分提亲、定亲、过礼、迎亲等完整仪程。', img: '/ich/40.png' },
+    { id: 41, title: '赫哲族传统婚俗', cat: 'custom', desc: '日出迎亲，拜天地、敬献鱼宴，渔猎特色。', img: '/ich/41.png' },
+    { id: 42, title: '赫哲族乌日贡大会', cat: 'custom', desc: '集说唱、歌舞、渔猎竞技于一体的民族盛会。', img: '/ich/42.png' },
   ];
 
-  // 核心逻辑：根据搜索词和选中的分类过滤数据
+  // 筛选逻辑
   const filteredData = heritageData.filter(item => {
     const matchCat = activeCategory === 'all' || item.cat === activeCategory;
     const matchSearch = item.title.includes(searchTerm) || item.desc.includes(searchTerm);
@@ -56,8 +73,17 @@ export default function ListPage() {
 
   return (
     <div>
+      <header>
+        <div className="logo">黑龙江非遗AI问答系统</div>
+        <nav>
+          <Link href="/">首页</Link>
+          <Link href="/chat">AI问答</Link>
+          <Link href="/list" className="active">非遗名录</Link>
+          <Link href="/goods">文创好物</Link>
+          <Link href="/intro">项目介绍</Link>
+        </nav>
+      </header>
 
-      {/* 搜索栏 */}
       <div className="search-bar">
         <input 
           type="text" 
@@ -68,7 +94,6 @@ export default function ListPage() {
       </div>
 
       <section className="list-layout">
-        {/* 左侧分类菜单 */}
         <aside className="category-menu">
           <h4>分类</h4>
           {categories.map(cat => (
@@ -82,16 +107,15 @@ export default function ListPage() {
           ))}
         </aside>
 
-        {/* 右侧非遗卡片网格 */}
         <div className="heritage-grid">
-          {filteredData.map((item, index) => (
-            <div className="heritage-card" key={index}>
+          {filteredData.map((item) => (
+            <div className="heritage-card" key={item.id}>
+              {/* 这里的样式会自动让图片填满卡片上半部分，就像图2一样 */}
               < img src={item.img} alt={item.title} />
               <div className="heritage-info">
                 <h3>{item.title}</h3>
                 <p className="heritage-desc">{item.desc}</p >
                 <div className="heritage-bottom">
-                  {/* 点击咨询按钮跳转到聊天页 */}
                   <Link href="/chat" className="ask-btn">进入AI咨询</Link>
                 </div>
               </div>
