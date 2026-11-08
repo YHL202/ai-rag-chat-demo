@@ -83,6 +83,19 @@ export default function Home() {
           </Link>
         </section>
       </section>
+<footer style={{ textAlign: 'center', padding: '40px 20px', marginTop: '40px', borderTop: '1px solid #e2ddd0', backgroundColor: '#f8f5eb' }}>
+  <p style={{ color: '#333', fontSize: '16px', fontWeight: 'bold', marginBottom: '8px', fontFamily: '"SimSun", "STSong", serif' }}>
+    🏫 黑龙江工商学院 · 🚀 一决队
+  </p >
+
+  <p style={{ color: '#555', fontSize: '14px', marginBottom: '8px' }}>
+    © 2026 黑龙江非遗 AI 问答系统 · 传智杯参赛作品
+  </p >
+  
+  <p style={{ color: '#999', fontSize: '12px' }}>
+    基于 Next.js 15 构建 | RAG 检索增强生成 | DeepSeek 大模型驱动
+  </p >
+</footer>
     </div>
   );
 }
