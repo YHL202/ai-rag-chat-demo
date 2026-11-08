@@ -18,7 +18,6 @@ export default function Chat() {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // 轮播数据（完全按照你队友的设计）
   const heritageSlides = [
     [
       { title: '伊玛堪', desc: '赫哲族口头说唱史诗，无乐器伴奏，说表交错。', img: '/img/yimakan.jpg', q: '赫哲族伊玛堪' },
@@ -36,16 +35,16 @@ export default function Chat() {
 
   const goodsSlides = [
     [
-      { title: '伊玛堪绘本', desc: '史诗绘本，面向年轻群体。', img: '/img01/yimakan_huiben.jpg' },
-      { title: '鱼皮画摆件', desc: '手工镂刻，赫哲特色艺术品。', img: '/img01/yupihua_baijian.jpg' }
+      { title: '东北传统唢呐', desc: '黑土民俗乐器，平均孔东北唢呐。', img: '/goods/suona.jpg' },
+      { title: '赫哲族鱼皮零钱包', desc: '赫哲手工鱼皮，渔趣零钱小包。', img: '/goods/yupihua_baijian.jpg' }
     ],
     [
-      { title: '狍皮纹样书签', desc: '复刻鄂伦春传统山林纹样。', img: '/img01/baopiwen_jinshushuqian.jpg' },
-      { title: '鲁日格勒帆布包', desc: '提取达斡尔舞蹈纹样设计。', img: '/img01/lurigrlewenyang_fanbudai.jpg' }
+      { title: '东北蒙古四胡', desc: '草原弦乐器，红木高音，专业练习。', img: '/goods/sihu.jpg' },
+      { title: '赫哲英雄阿木绘本', desc: '非遗故事绘本，民族英雄史诗。', img: '/goods/yimakan_huiben.jpg' }
     ],
     [
-      { title: '皮影装饰摆件', desc: '望奎皮影复刻，东北非遗特色。', img: '/img01/wangkui_piyin.jpg' },
-      { title: '迷你四胡摆件', desc: '达斡尔乌钦伴奏乐器缩小版。', img: '/img01/minisihu_baijian.jpg' }
+      { title: '黑河鄂伦春桦树皮画', desc: '山野手绘画作，传统非遗手工制品。', img: '/goods/huashupi_shouhe.jpg' },
+      { title: '五大连池纪念币', desc: '火山原石造物，北国山石文创。', img: '/goods/coin.jpg' }
     ]
   ];
 
