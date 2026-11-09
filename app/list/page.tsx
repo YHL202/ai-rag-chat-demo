@@ -97,14 +97,14 @@ export default function ListPage() {
           ))}
         </aside>
 
-        <div className="heritage-grid">
+               
+                <div className="heritage-grid" style={{ alignItems: 'start' }}>
           {filteredData.map((item) => (
-            <div className="heritage-card" key={item.id}>
-              {/* 这里的样式会自动让图片填满卡片上半部分，就像图2一样 */}
-              < img src={item.img} alt={item.title} />
+            <div className="heritage-card" key={item.id} style={{ height: 'fit-content' }}>
+              <img src={item.img} alt={item.title} />
               <div className="heritage-info">
                 <h3>{item.title}</h3>
-                <p className="heritage-desc">{item.desc}</p >
+                <p className="heritage-desc">{item.desc}</p>
                 <div className="heritage-bottom">
                   <Link href="/chat" className="ask-btn">进入AI咨询</Link>
                 </div>
